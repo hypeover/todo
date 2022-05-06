@@ -21,7 +21,7 @@ const Login = () => {
     //e.preventDefault();
     try {
       await signIn(email, password)
-      navigate('/Home')
+      navigate('/Home/Dashboard')
     } catch (e) {
       if(e.message === 'Firebase: Error (auth/invalid-email).'){
         setError('Invalid E-Mail')

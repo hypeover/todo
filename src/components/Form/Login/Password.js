@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { InputContainer, PasswordInput } from '../styles/FormStyles'
-import { ReactComponent as Pass } from '../../assets/pass.svg'
-import { ReactComponent as Passw } from '../../assets/passw.svg'
-import { ReactComponent as Nopassw } from '../../assets/nopassw.svg'
+import { ReactComponent as Pass } from '../../assets/icons/pass.svg'
+import { ReactComponent as Passw } from '../../assets/icons/passw.svg'
+import { ReactComponent as Nopassw } from '../../assets/icons/nopassw.svg'
 
 
 
@@ -26,7 +26,7 @@ const Password = ({password, onEnter}) => {
 
   return (
     <InputContainer>
-        <Pass fill={passwordBool ? 'black' : '#CCCFD9'} style={{zIndex:'-1' ,position: 'absolute', transition:'0.5s' ,transform:'translate(14px, 7px)'}}  height='25px' width='25px' />
+        <Pass fill={passwordBool ? 'black' : '#CCCFD9'} style={{position: 'absolute', transition:'0.5s' ,transform:'translate(14px, 7px)'}}  height='25px' width='25px' />
         <PasswordInput bool={passwordBool} onKeyPress={(e) => {if(e.key === 'Enter'){
             onEnter()
         }}} onChange={(e) => {

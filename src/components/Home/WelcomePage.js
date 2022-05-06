@@ -13,7 +13,7 @@ const WelcomePage = () => {
   const register = async () => {
     try {
       await updateProfile(user, { displayName: name })
-      navigate('/Home')
+      navigate('/Home/Dashboard')
       console.log(user)
     } catch (e) {
       console.log(e)

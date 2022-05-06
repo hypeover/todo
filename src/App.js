@@ -13,7 +13,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Form />} />
           <Route path='/Welcome' element={<ProtectedRoute><WelcomePage /></ProtectedRoute>} />
-          <Route path='/Home' element={<ProtectedRoute><Home /></ProtectedRoute>} />
+          <Route path='/Home/*' element={<ProtectedRoute><Home /></ProtectedRoute>} />
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>

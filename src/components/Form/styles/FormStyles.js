@@ -171,9 +171,10 @@ export const Btn = styled.button`
 
 export const Header = styled.h1`
   color: #4c34e2;
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 0 0 30px 0;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: 'quicksand', sans-serif;
 `
 
 export const SwitchCard = styled.div`
@@ -229,4 +230,10 @@ export const Alert = styled.p`
   color: white;
   padding: 20px 20px;
   border-radius: 10px;
+`
+
+export const SliderText = styled.p`
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
 `
