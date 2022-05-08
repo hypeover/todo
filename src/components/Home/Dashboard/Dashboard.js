@@ -1,8 +1,11 @@
 import React from 'react'
+import { Pages } from '../styled/HomeStyles'
 
 const Dashboard = () => {
   return (
-    <div>assasa</div>
+    <Pages>
+      Kocham Karcie💜
+    </Pages>
   )
 }
 

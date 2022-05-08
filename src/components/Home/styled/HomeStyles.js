@@ -37,118 +37,100 @@ export const WelcomeInput = styled.input`
     }
 `
 
+export const Pages = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const MainPage = styled.div`
     width: 100vw;
     height: 100vh;
     display: flex;
+    background-color: #f6f8fa;
 `
 
-export const NavBar = styled.div`
-    height: 100vh;
-    width: 300px;
-    background-color: rgba( 76, 52, 226, 0.75 );
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 30px 30px;
-    text-align: left;
+export const Wrapper = styled.nav`
+  background-color: white;
+  height: 100%;
+  width: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px 0;
 `
 
-export const NameText = styled.p`
-    color: white;
-    word-wrap: break-word;
-    font-size: 2rem;
-    margin: 0;
-    font-weight: 500;
+export const Logo = styled.div`
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #4c34e2;
 `
 
-export const LogoutButton = styled.button`
-display: flex;
-align-items: center;
-justify-content: center;
-margin: 25px 0 5px 0;
-color: #4c34e2;
-font-weight: 600;
-font-size: 1.3rem;
-border: solid 3px white;
-border-radius: 15px;
-box-sizing: border-box;
-padding: 5px 20px;
-position: fixed;
-overflow: hidden;
-z-index: 1;
-fill: #82859C;
-transition: 0.2s;
-cursor: pointer;
-background-color: white;
-width: 130px;
-bottom: 30px;
-
-
-:hover {
+export const LogoutContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  fill: #CCCFD9;
+  cursor: pointer;
   transition: 0.5s;
-  border: solid 3px #4c34e2;
-  color: white;
-  fill: white;
-}
+  margin: 0 0 -20px 0;
+  
+  :hover {
+    fill: black;
+  }
 
-::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  transform: translate(-100px,-75px);
-  background-color: #4c34e2;
-  transition: 0.5s;
-  z-index: -1;
-  opacity: 0;
-}
+  :hover::after {
+    background-color: black;
+  }
 
-::before {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  transform: translate(100px,75px);
-  background-color: rgba(74,0,224,1);
-  transition: 0.5s;
-  z-index: -1;
-  opacity: 0;
-}
-
-:hover::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  transform: translate(0px,0px);
-  background-color: #4c34e2;
-  opacity: 1;
-}
-
-:hover::before {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  transform: translate(0px,0px);
-  background-color: rgba(74,0,224,1);
-  opacity: 1;
-}
+  ::after {
+    content: '';
+    transition: 0.5s;
+    display: block;
+    height: 3px;
+    width: 70px;
+    background-color: #CCCFD9;
+    position: absolute;
+    border-radius: 50px;
+    transform: translateY(-40px);
+  }
 `
 
-export const RestPage =  styled.div`
+export const IconsContainer = styled.div`
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const RestPage = styled.div`
   width: 100%;
-  min-height: 100vh;
-  overflow: scroll;
-  overflow-x: hidden;
-` 
+  height: 100%;
+  background-color: red;
+`

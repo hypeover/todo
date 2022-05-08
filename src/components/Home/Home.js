@@ -1,41 +1,26 @@
 import React from 'react'
-import { UserAuth } from '../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
-import { LogoutButton, MainPage, NameText, NavBar, RestPage } from './styled/HomeStyles';
-import { Routes, Route } from 'react-router-dom';
-import Dashboard from './Routes/Dashboard';
-import Projects from './Routes/Projects'
-
+//import { UserAuth } from '../context/AuthContext'
+import { MainPage } from './styled/HomeStyles';
+//import { useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from './Dashboard/Dashboard'
+import Projects from './Projects/Projects'
+import Navbar from './Navbar';
 
 const Home = () => {
 
-  const {user, logout} = UserAuth();
-  const navigate = useNavigate()
+  
 
-  const handleLogout = async () => {
-    try { 
-      await logout()
-      navigate('/')
-      console.log('You are logged out')
-    } catch (e) {
-      console.log(e.message)
-    }
-  }
+  
 
   return (
     <MainPage>
-        <NavBar>
-            <NameText>{user && user.displayName}</NameText>
-
-
-            <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
-        </NavBar>
-        <RestPage>
-          <Routes>
-            <Route path='/Dashboard' element={<Dashboard />} />
-            <Route path='/Projects' element={<Projects />} />
-          </Routes>
-        </RestPage>
+      <Routes>
+        <Route path='/' element={<Navbar />} >
+          <Route path='/Dashboard' element={<Dashboard />} />
+          <Route path='/Projects' element={<Projects />} />
+        </Route>
+      </Routes>
     </MainPage>
   )
 }
@@ -43,4 +28,17 @@ const Home = () => {
 export default Home
 
 
+//const {user, logout} = UserAuth();
+//const navigate = useNavigate()
 
+// <NameText>{user && user.displayName}</NameText> 
+
+// const handleLogout = async () => {
+//   try { 
+//     await logout()
+//     navigate('/')
+//     console.log('You are logged out')
+//   } catch (e) {
+//     console.log(e.message)
+//   }
+// }

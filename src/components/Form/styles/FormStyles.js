@@ -237,3 +237,11 @@ export const SliderText = styled.p`
   font-size: 2rem;
   font-weight: 600;
 `
+
+export const Name = styled.h1`
+  font-family: 'Comfortaa', sans-serif;
+  color: #1F152A;
+  font-size: 5.5rem;
+  margin: 0 0 30px 0;
+`
+

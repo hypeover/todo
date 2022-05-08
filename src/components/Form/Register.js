@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { Alert, SwitchHyper, SwitchText, WrapperLeft, InputsContainer, Header } from './styles/FormStyles'
+import { Alert, SwitchHyper, SwitchText, WrapperLeft, InputsContainer, Name } from './styles/FormStyles'
 import Email from './Register/Email'
 import Password from './Register/Password'
 import Button from './Register/Button'
@@ -50,7 +50,7 @@ const Register = () => {
   return (
     <WrapperLeft bool={Context.switchBoolean} >
         <InputsContainer>
-          <Header>Register</Header>
+          <Name>mtodo</Name>
           <Email email={setEmail} />
           <Password onEnter={handleSubmit} password={setPassword} />
           <Button submit={handleSubmit} />

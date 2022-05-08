@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { SwitchHyper, SwitchText, WrapperRight, InputsContainer, Header, Alert } from './styles/FormStyles'
+import { SwitchHyper, SwitchText, WrapperRight, InputsContainer, Alert, Name } from './styles/FormStyles'
 import { FormContext } from './Form'
 import Email from './Login/Email'
 import Password from './Login/Password'
@@ -36,7 +36,7 @@ const Login = () => {
     }
   }
 
-  const showAlert = (e) => {
+  const showAlert = () => {
     setAlertBool(true)
     setTimeout(() => {
       setAlertBool(false)
@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <WrapperRight bool={Context.switchBoolean} >
         <InputsContainer>
-          <Header>Login</Header>
+          <Name>mtodo</Name>
           <Email email={setEmail} />
           <Password onEnter={handleSubmit} password={setPassword} />
           <Button submit={handleSubmit} />
